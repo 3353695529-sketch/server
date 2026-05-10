@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>璀璨之光 - 玩家手册</title>
+
+<!-- 浏览器小图标 -->
+<link rel="icon" href="https://mpimg.cn/view.php/a0c03f671b7acdf7a81c7c4c3f88d478.ico">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f1115;
+    color:#f5f5f5;
+    font-family:"Microsoft YaHei",sans-serif;
+    line-height:1.8;
+}
+
+/* 顶部 */
+
+header{
+    background:linear-gradient(135deg,#111827,#1f2937);
+    padding:60px 20px;
+    text-align:center;
+    border-bottom:3px solid #2563eb;
+}
+
+header h1{
+    font-size:52px;
+    color:#60a5fa;
+    margin-bottom:15px;
+}
+
+header p{
+    color:#cbd5e1;
+    font-size:18px;
+}
+
+.btns{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    padding:12px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.btn:hover{
+    background:#3b82f6;
+}
+
+/* 导航栏 */
+
+nav{
+    position:sticky;
+    top:0;
+    background:#111827;
+    padding:15px;
+    border-bottom:1px solid #374151;
+    z-index:999;
+}
+
+nav ul{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    list-style:none;
+}
+
+nav a{
+    color:#93c5fd;
+    text-decoration:none;
+    white-space:nowrap;
+    padding:8px 15px;
+    border-radius:8px;
+}
+
+nav a:hover{
+    background:#2563eb;
+    color:white;
+}
+
+/* 主体 */
+
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:auto;
+    padding:40px 0;
+}
+
+section{
+    background:#161b22;
+    margin-bottom:35px;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid #2d3748;
+}
+
+section h2{
+    color:#60a5fa;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+section h3{
+    color:#93c5fd;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+/* 卡片 */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:14px;
+    border:1px solid #374151;
+}
+
+.card h3{
+    margin-top:0;
+}
+
+/* 标签 */
+
+.tag{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:12px;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.red{
+    background:#7f1d1d;
+}
+
+.blue{
+    background:#1e3a8a;
+}
+
+.yellow{
+    background:#92400e;
+}
+
+.green{
+    background:#166534;
+}
+
+.white{
+    background:#6b7280;
+}
+
+.black{
+    background:#000000;
+}
+
+/* 地图 */
+
+.zone-map{
+    width:100%;
+    border-radius:16px;
+    margin-bottom:25px;
+    border:2px solid #374151;
+    display:block;
+}
+
+/* 列表 */
+
+ul{
+    margin-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+/* 页脚 */
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    border-top:1px solid #374151;
+    color:#94a3b8;
+}
+
+/* 手机适配 */
+
+@media (max-width:768px){
+
+    header{
+        padding:40px 15px;
+    }
+
+    header h1{
+        font-size:36px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    section{
+        padding:20px;
+    }
+
+    section h2{
+        font-size:26px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:16px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .btns{
+        flex-direction:column;
+    }
+
+    .zone-map{
+        border-radius:12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- 顶部 -->
+
+<header>
+
+<h1>璀璨之光</h1>
+
+<p>
+Unturned 中文末日生存服务器 · PVP × PVE × Light RP
+</p>
+
+<div class="btns">
+
+<a class="btn"
+href="https://vv.astlora.cn"
+target="_blank">
+官方网站
+</a>
+
+<a class="btn"
+href="https://discord.gg/eMmnXqVtxK"
+target="_blank">
+Discord
+</a>
+
+</div>
+
+</header>
+
+<!-- 导航栏 -->
+
+<nav>
+
+<ul>
+
+<li>
+<a href="#intro">服务器简介</a>
+</li>
+
+<li>
+<a href="#zones">区域规则</a>
+</li>
+
+<li>
+<a href="#factions">阵营介绍</a>
+</li>
+
+<li>
+<a href="#relations">阵营关系</a>
+</li>
+
+<li>
+<a href="#rules">服务器规则</a>
+</li>
+
+<li>
+<a href="#punish">处罚机制</a>
+</li>
+
+</ul>
+
+</nav>
+
+<!-- 主体 -->
+
+<div class="container">
+
+<!-- 简介 -->
+
+<section id="intro">
+
+<h2>服务器简介</h2>
+
+<p>
+
+欢迎来到《璀璨之光》。
+
+这是一个融合：
+
+PVP、
+PVE、
+轻度角色扮演（Light RP）、
+阵营战争、
+区域秩序、
+资源争夺、
+玩家互动、
+世界观设定
+
+于一体的中文末日生存服务器。
+
+这里不仅仅是普通PVP服务器，
+更是一个由玩家共同创造故事、
+战争与秩序的世界。
+
+</p>
+
+</section>
+
+<!-- 区域规则 -->
+
+<section id="zones">
+
+<h2>区域规则</h2>
+
+<!-- 地图图片 -->
+
+<img
+src="https://img.cdn1.vip/i/6a00e4b462894_1778443444.png"
+alt="https://img.cdn1.vip/i/6a00e4b462894_1778443444.png"
+class="zone-map"
+>
+
+<div class="grid">
+
+<!-- 红圈 -->
+
+<div class="card">
+
+<div class="tag red">
+交火区（红圈）
+</div>
+
+<h3>高危险PVP区域</h3>
+
+<ul>
+
+<li>允许阵营战争</li>
+
+<li>允许资源争夺</li>
+
+<li>允许伏击与载具战</li>
+
+<li>允许高强度PVP</li>
+
+<li>禁止外挂与BUG利用</li>
+
+<li>禁止穿模与卡地形</li>
+
+</ul>
+
+</div>
+
+<!-- 蓝圈 -->
+
+<div class="card">
+
+<div class="tag blue">
+协议区（蓝圈）
+</div>
+
+<h3>资源探索区域</h3>
+
+<ul>
+
+<li>默认禁止恶意主动攻击</li>
+
+<li>允许自卫反击</li>
+
+<li>允许玩家贸易</li>
+
+<li>允许阵营巡逻</li>
+
+<li>禁止RDM</li>
+
+<li>禁止假和平骗杀</li>
+
+</ul>
+
+</div>
+
+<!-- 黄圈 -->
+
+<div class="card">
+
+<div class="tag yellow">
+安全区（黄圈）
+</div>
+
+<h3>严格和平区域</h3>
+
+<ul>
+
+<li>用于交易与社交</li>
+
+<li>禁止主动攻击</li>
+
+<li>禁止偷车与堵路</li>
+
+<li>禁止引怪害人</li>
+
+<li>违规处罚加重</li>
+
+</ul>
+
+</div>
+
+<!-- 黑圈 -->
+
+<div class="card">
+
+<div class="tag black">
+死亡区（黑圈）
+</div>
+
+<h3>极高危险区域</h3>
+
+<ul>
+
+<li>高级感染者</li>
+
+<li>高级物资</li>
+
+<li>高强度PVP</li>
+
+<li>进入默认接受高风险</li>
+
+</ul>
+
+</div>
+
+<!-- 绿圈 -->
+
+<div class="card">
+
+<div class="tag green">
+商人活动区（绿圈）
+</div>
+
+<h3>流浪商人区域</h3>
+
+<ul>
+
+<li>全地图通常仅存在一名商人</li>
+
+<li>出售物品随机</li>
+
+<li>拥有基础武装</li>
+
+<li>不会主动攻击</li>
+
+<li>危险时会躲进装甲车</li>
+
+</ul>
+
+</div>
+
+<!-- 白圈 -->
+
+<div class="card">
+
+<div class="tag white">
+维和区域（白圈）
+</div>
+
+<h3>维和部队活动区</h3>
+
+<ul>
+
+<li>用于巡逻与护送</li>
+
+<li>维和部队不是管理员</li>
+
+<li>允许调停冲突</li>
+
+<li>禁止滥用身份</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- 阵营 -->
+
+<section id="factions">
+
+<h2>阵营介绍</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>临时政府</h3>
+
+<p>
+负责维持秩序与建立安全区域的官方势力。
+拥有正规管理体系，
+会建立检查站与秩序区域。
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>新革命军</h3>
+
+<p>
+反抗旧秩序的武装组织。
+擅长游击战与高机动突袭。
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>特警司令部</h3>
+
+<p>
+高度军事化的特种武装组织。
+拥有强大战斗力与重武装行动能力。
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>维和部队</h3>
+
+<p>
+负责稳定局势、
+调停冲突、
+护送商队与保护平民。
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>土匪</h3>
+
+<p>
+高风险高收益阵营。
+允许抢劫与伏击，
+但禁止恶意折磨玩家。
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>流浪商人</h3>
+
+<p>
+特殊中立NPC势力。
+全地图通常仅存在一名，
+出售物资随机，
+危险时会进入装甲车进行交易。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- 阵营关系 -->
+
+<section id="relations">
+
+<h2>阵营关系</h2>
+
+<ul>
+
+<li>临时政府 ↔ 新革命军：敌对</li>
+
+<li>临时政府 ↔ 特警司令部：盟友</li>
+
+<li>维和部队 ↔ 流浪商人：保护关系</li>
+
+<li>土匪 ↔ 流浪商人：掠夺目标</li>
+
+<li>新革命军 ↔ 维和部队：复杂关系</li>
+
+<li>特警司令部 ↔ 土匪：长期敌对</li>
+
+</ul>
+
+</section>
+
+<!-- 总规则 -->
+
+<section id="rules">
+
+<h2>服务器规则</h2>
+
+<h3>重点规则</h3>
+
+<ul>
+
+<li>禁止外挂与BUG利用</li>
+
+<li>禁止恶意钻规则漏洞</li>
+
+<li>禁止恶意骚扰玩家</li>
+
+<li>禁止假和平骗杀</li>
+
+<li>禁止假扮维和抢劫</li>
+
+<li>禁止利用小号转移违规收益</li>
+
+</ul>
+
+<h3>基地规则</h3>
+
+<ul>
+
+<li>允许建造基地与据点</li>
+
+<li>服务器禁止拆家</li>
+
+<li>禁止炸家</li>
+
+<li>禁止偷拆</li>
+
+<li>禁止恶意破坏建筑</li>
+
+<li>即使敌对阵营也不允许拆家</li>
+
+</ul>
+
+</section>
+
+<!-- 处罚 -->
+
+<section id="punish">
+
+<h2>处罚机制</h2>
+
+<ul>
+
+<li>轻度违规：警告 / 踢出服务器</li>
+
+<li>中度违规：临时封禁</li>
+
+<li>严重违规：永久封禁</li>
+
+<li>作弊行为默认永久封禁</li>
+
+</ul>
+
+<h3>最终解释权</h3>
+
+<p>
+
+管理员拥有规则解释权与漏洞判定权。
+
+恶意钻空子不属于合理玩法。
+
+</p>
+
+</section>
+
+</div>
+
+<!-- 页脚 -->
+
+<footer>
+
+<p>
+《璀璨之光》Unturned 服务器
+</p>
+
+<p>
+QQ群：686854228
+</p>
+
+<p>
+希望你能在这里找到属于自己的生存方式。
+</p>
+
+</footer>
+
+</body>
+
+</html>
